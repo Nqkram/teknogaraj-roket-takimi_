@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<!--
+=====================================================================================
+  TEKNOGARAJ ROKET TAKIMI — index.html
+  =====================================================================================
+  DOSYA YAPISI
+     index.html           -> bu dosya (içerik)
+     css/style.css        -> tüm stiller (renkler en üstte :root içinde)
+     js/main.js           -> menü ve açılır menü davranışları
+     images/              -> logo ve paylaşım görseli
+     favicon.svg          -> sekme ikonu
+     robots.txt / sitemap.xml / site.webmanifest
+
+  !!! YAYINA ALMADAN ÖNCE YAPILACAK TEK ŞEY !!!
+  Aşağıda 4 yerde geçen  https://ALAN-ADINIZ.com  yazısını gerçek alan adınızla
+  değiştirin (canonical + og:url + og:image + twitter:image).
+  Aynı değişikliği sitemap.xml ve robots.txt içinde de yapın.
+
+  BÖLÜM HARİTASI (CTRL+F ile arayın)
+     BÖLÜM 1  -> ÜST ÇUBUK / NAVBAR (roket ikonu burada)
+     BÖLÜM 2  -> KAPAK / HERO (logo + ana başlık + giriş metni)
+     BÖLÜM 3  -> BİZ KİMİZ / HAKKIMIZDA
+     BÖLÜM 4  -> GEÇMİŞİMİZ / BAŞARILAR
+     BÖLÜM 5  -> ROKETİMİZ (Mekanik / Elektronik / Faydalı Yük)
+     BÖLÜM 6  -> MODEL ROKETÇİLİK NEDİR?
+     BÖLÜM 7  -> VİDEO ALANI
+     BÖLÜM 8  -> SPONSORLUK (içerik boş, siz dolduracaksınız)
+     BÖLÜM 9  -> İLETİŞİM
+     BÖLÜM 10 -> ALT BİLGİ / FOOTER
+=====================================================================================
+-->
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0a0a0a">
+
+<!-- ===== TEMEL SEO ===== -->
+<title>Teknogaraj Roket Takımı | Gaziantep Orta İrtifa Roket Takımı</title>
+<meta name="description" content="Teknogaraj Roket Takımı; Gaziantep Bilim Merkezi ve Teknogaraj çatısı altında kurulan, lise ve üniversite öğrencilerinden oluşan roket takımı. 2026 sezonunda Orta İrtifa kategorisinde çalışıyoruz.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Teknogaraj Roket Takımı">
+
+<!-- DEĞİŞTİRİN: alan adınız belli olunca aşağıdaki adresi güncelleyin -->
+<link rel="canonical" href="https://ALAN-ADINIZ.com/">
+
+<!-- ===== SOSYAL MEDYA PAYLAŞIM KARTI (Open Graph) ===== -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Teknogaraj Roket Takımı">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:title" content="Teknogaraj Roket Takımı">
+<meta property="og:description" content="Gaziantep Bilim Merkezi ve Teknogaraj çatısı altında kurulan roket takımı. 2026 sezonunda Orta İrtifa kategorisinde çalışıyoruz.">
+<meta property="og:url" content="https://ALAN-ADINIZ.com/">
+<meta property="og:image" content="https://ALAN-ADINIZ.com/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Teknogaraj Roket Takımı logosu ve takım adı">
+
+<!-- ===== TWITTER / X KARTI ===== -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Teknogaraj Roket Takımı">
+<meta name="twitter:description" content="Gaziantep Bilim Merkezi ve Teknogaraj çatısı altında kurulan roket takımı. 2026 sezonunda Orta İrtifa kategorisinde çalışıyoruz.">
+<meta name="twitter:image" content="https://ALAN-ADINIZ.com/images/og-image.jpg">
+
+<!-- ===== İKONLAR VE MANİFEST ===== -->
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="images/logo.png" sizes="any">
+<link rel="apple-touch-icon" href="images/logo.png">
+<link rel="manifest" href="site.webmanifest">
+
+<!-- ===== STİL DOSYASI ===== -->
+<link rel="stylesheet" href="css/style.css">
+
+<!-- ===== YAPILANDIRILMIŞ VERİ (JSON-LD) =====
+     Sadece sitede zaten yazan, doğrulanabilir bilgiler kullanıldı. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SportsTeam",
+  "name": "Teknogaraj Roket Takımı",
+  "url": "https://ALAN-ADINIZ.com/",
+  "logo": "https://ALAN-ADINIZ.com/images/logo.png",
+  "email": "teknogarajrokettakimi@gmail.com",
+  "foundingDate": "2026",
+  "areaServed": "Gaziantep, Türkiye",
+  "description": "Gaziantep Bilim Merkezi ve Teknogaraj çatısı altında kurulan, lise ve üniversite düzeyindeki üyelerden oluşan roket takımı.",
+  "sameAs": [
+    "https://www.instagram.com/teknogaraj_rocket_teamm/",
+    "https://www.linkedin.com/company/teknogaraj-roket-tak%C4%B1m%C4%B1/"
+  ]
+}
+</script>
+
+<!-- JS: defer ile yüklenir, sayfa çizimini bloklamaz -->
+<script src="js/main.js" defer></script>
+</head>
+
+<body>
+
+<!-- Klavye kullanıcıları için: TAB'a basınca çıkar -->
+<a class="atla" href="#icerik">İçeriğe geç</a>
+
+
+<!-- =====================================================================
+     BÖLÜM 1 — ÜST ÇUBUK / NAVBAR
+     ---------------------------------------------------------------------
+     * Soldaki roket ikonu aşağıdaki <svg> kodudur.
+     * Menüye yeni madde eklemek için <li><a href="#hedef">İsim</a></li>
+       satırını kopyalayıp yapıştırın.
+     ===================================================================== -->
+<header class="ustcubuk">
+  <div class="ustcubuk-ic">
+
+    <!-- SOL: ROKET İKONU + TAKIM ADI -->
+    <a class="marka" href="#kapak">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+        <path d="M12 2c2.8 2.6 4.2 6 4.2 9.6v3.1l-2.1 2.1h-4.2L7.8 14.7v-3.1C7.8 8 9.2 4.6 12 2z" stroke="#f4f2f1" stroke-width="1.3" stroke-linejoin="round"/>
+        <circle cx="12" cy="9.6" r="1.7" fill="#7b0126" stroke="#f4f2f1" stroke-width="1"/>
+        <path d="M7.8 12.4 5.3 15v3.2l2.5-1.6M16.2 12.4 18.7 15v3.2l-2.5-1.6" stroke="#f4f2f1" stroke-width="1.3" stroke-linejoin="round"/>
+        <path d="M10.6 18.4 12 22l1.4-3.6" stroke="#c4184a" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+      <span class="marka-yazi">Teknogaraj<span>Roket Takımı</span></span>
+    </a>
+
+    <!-- MOBİL MENÜ BUTONU -->
+    <button class="hamburger" id="hamburger" type="button"
+            aria-label="Menüyü aç veya kapat" aria-expanded="false" aria-controls="ana-menu">
+      <span class="ikon-ac" aria-hidden="true">☰</span>
+      <span class="ikon-kapat" aria-hidden="true">✕</span>
+    </button>
+
+    <!-- MENÜ -->
+    <nav aria-label="Ana menü">
+      <ul class="menu" id="ana-menu">
+        <li><a href="#hakkimizda">Biz Kimiz</a></li>
+        <li><a href="#gecmis">Geçmişimiz</a></li>
+
+        <!-- ROKETİMİZ: açılır alt menü -->
+        <li>
+          <button class="acilir-buton" type="button" aria-expanded="false" aria-controls="menu-roket" aria-haspopup="true">
+            Roketimiz <span aria-hidden="true">▾</span>
+          </button>
+          <div class="acilir" id="menu-roket">
+            <a href="#mekanik">Mekanik</a>
+            <a href="#elektronik">Elektronik / Aviyonik</a>
+            <a href="#faydali-yuk">Faydalı Yük &amp; Görev</a>
+          </div>
+        </li>
+
+        <li><a href="#roketcilik">Model Roketçilik</a></li>
+        <li><a href="#sponsorluk">Sponsorluk</a></li>
+
+        <!-- İLETİŞİM: açılır alt menü -->
+        <li>
+          <button class="acilir-buton" type="button" aria-expanded="false" aria-controls="menu-iletisim" aria-haspopup="true">
+            İletişim <span aria-hidden="true">▾</span>
+          </button>
+          <div class="acilir acilir--sag" id="menu-iletisim">
+            <p class="bilgi"><b>Eyüp Arda Soytürk</b>Takım Kaptanı</p>
+            <a href="tel:+905524897978">0552 489 79 78</a>
+            <p class="bilgi"><b>Gülşen Alsaç</b>İletişim Sorumlusu</p>
+            <a href="tel:+905348627027">0534 862 70 27</a>
+            <a href="mailto:teknogarajrokettakimi@gmail.com">E-posta gönder</a>
+            <a href="https://www.instagram.com/teknogaraj_rocket_teamm/" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://www.linkedin.com/company/teknogaraj-roket-tak%C4%B1m%C4%B1/" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+<main id="icerik">
+
+<!-- =====================================================================
+     BÖLÜM 2 — KAPAK / HERO
+     ---------------------------------------------------------------------
+     * KAPAK GÖRSELİ: aşağıdaki <picture> bloğu. Değiştirmek için
+       images/ klasörüne yeni dosyayı koyup src/srcset yolunu güncelleyin.
+       width ve height değerlerini de görselin gerçek ölçüsüyle yazın
+       (sayfanın yüklenirken zıplamaması için gereklidir).
+     * Sayfadaki TEK <h1> burasıdır; başka yerde h1 kullanmayın.
+     ===================================================================== -->
+<section class="kapak" id="kapak" aria-labelledby="kapak-baslik">
+  <div class="kapsayici kapak-ic">
+
+    <div>
+      <p class="ustyazi">Gaziantep · Orta İrtifa Roket Takımı</p>
+
+      <!-- ANA BAŞLIK (H1) -->
+      <h1 id="kapak-baslik">Gökyüzünde<br>yazılmamış bir<br>hikâye var.</h1>
+
+      <!-- GİRİŞ METNİ -->
+      <p class="giris">
+        Gaziantep Bilim Merkezi ve Teknogaraj çatısı altında bir araya gelen,
+        Türkiye dereceleri kazanmış üyelerden kurulu bir roket takımıyız.
+        Bu sezon hedefimiz Orta İrtifa.
+      </p>
+
+      <div class="butonlar">
+        <a class="btn" href="#hakkimizda">Bizi tanıyın</a>
+        <a class="btn btn-bos" href="#roketimiz">Roketimiz</a>
+        <a class="btn btn-bos" href="#iletisim">İletişime geçin</a>
+      </div>
+    </div>
+
+    <!-- KAPAK GÖRSELİ / LOGO — üst bölümde olduğu için lazy loading YOK -->
+    <div class="logo-cerceve">
+      <picture>
+        <source srcset="images/logo.webp" type="image/webp">
+        <img src="images/logo.png"
+             alt="Teknogaraj Roket Takımı logosu"
+             width="560" height="560"
+             decoding="async" fetchpriority="high">
+      </picture>
+    </div>
+
+  </div>
+
+  <!-- KAPAK ALTI KÜÇÜK BİLGİLER -->
+  <div class="kapsayici">
+    <h2 class="gizli-baslik">Takım künyesi</h2>
+    <ul class="rakamlar">
+      <li class="rakam"><b>2026</b><span>Kuruluş yılımız</span></li>
+      <li class="rakam"><b>Orta İrtifa</b><span>Bu sezonki kategorimiz</span></li>
+      <li class="rakam"><b>Lise + Üniversite</b><span>Takım yapımız</span></li>
+    </ul>
+  </div>
+</section>
+
+
+<!-- =====================================================================
+     BÖLÜM 3 — BİZ KİMİZ / HAKKIMIZDA
+     Her paragraf bir <p>...</p> satırıdır; yeni paragraf eklemek için
+     araya bir <p>Yazı</p> satırı ekleyin.
+     ===================================================================== -->
+<section class="bolum" id="hakkimizda" aria-labelledby="hakkimizda-baslik">
+  <div class="kapsayici">
+    <p class="cizgi-bordo" aria-hidden="true"></p>
+    <h2 class="bolum-baslik" id="hakkimizda-baslik">Biz kimiz?</h2>
+    <p class="bolum-alt">Teknogaraj Roket Takımı</p>
+
+    <div class="ikili">
+      <!-- SOL SÜTUN -->
+      <div class="metin">
+        <p>
+          2026 yılında Gaziantep Bilim Merkezi ve Teknogaraj çatısı altında bir araya geldik.
+          Yeni kurulmuş olabiliriz ama hikâyemiz yeni başlamıyor.
+        </p>
+        <p>
+          Takımımız; Türkiye dereceleri elde etmiş, Lise, Yüksek İrtifa, Orta İrtifa ve Zorlu Görev
+          kategorilerinde yarışmış üyelerin bilgi birikimiyle yola çıkıyor. Atış alanında roket
+          hazırlamanın, gece yarısı entegrasyon yapmanın, bir uçuşun saniyeler içinde nelere bağlı
+          olduğunu görmenin ne demek olduğunu bilen bir ekibiz. Bu tecrübe, bizi ilk günden
+          sıfırdan başlayan bir takım olmaktan çıkarıyor.
+        </p>
+        <p>
+          Gaziantep adına Lise, Yüksek İrtifa ve Zorlu Görev kategorilerinde önemli başarılara
+          imza atıldı. Şehrimiz bu alanda adını duyurdu. Ancak bir kategori hâlâ boş duruyor.
+        </p>
+
+        <p class="vurgu">Şimdi sırada henüz yazılmamış bir hikâye var: Orta İrtifa.</p>
+
+        <p>
+          Gaziantep'in daha önce derece elde edemediği bu kategoride, geçmiş deneyimlerimizden
+          aldığımız güçle yeni bir başarı hikâyesi yazmak için buradayız. Orta İrtifa; daha yüksek
+          hız, daha yüksek yapısal yük ve hata payının neredeyse hiç olmadığı bir kurtarma sistemi
+          demek. Tam da bu yüzden seçtik.
+        </p>
+      </div>
+
+      <!-- SAĞ SÜTUN -->
+      <div class="metin">
+        <p>
+          Takımımız lise ve üniversite düzeyindeki üyelerden oluşuyor. Mekanik, elektronik,
+          yazılım ve görev yükü ekipleri kendi alanlarında çalışıyor; tasarım kararları ise
+          ortak alınıyor. Deneyimli üyelerimizin bildiklerini yeni üyelere aktardığı, herkesin
+          eline alet alıp üretim yaptığı bir çalışma düzenimiz var.
+        </p>
+        <p>
+          Amacımız sadece bir roket uçurmak değil. Tasarımdan analize, üretimden teste kadar her
+          adımı kendi imkânlarımızla yürütüp, yarışma sonunda elimizde doğrulanmış bir mühendislik
+          süreci ve bu işi öğrenmiş bir ekip olmasını istiyoruz. Bugün burada roket yapan
+          arkadaşlarımızın büyük kısmı, birkaç yıl sonra bu sektörde çalışıyor olacak.
+        </p>
+        <p>
+          Roketlerimizin aerodinamik performansını, yapısal bütünlüğünü ve görev başarısını en üst
+          seviyeye çıkarmak için disiplinli şekilde çalışıyoruz. Yarışma sürecinde roket tasarımı,
+          aviyonik sistemler, yapısal analiz, kurtarma sistemleri ve görev gereksinimleri
+          doğrultusunda çalışmalarımız devam ediyor.
+        </p>
+        <p class="vurgu">
+          Biz Teknogaraj Roket Takımıyız. İmkânsız görünen hedeflerin, doğru ekip ve kararlı bir
+          çalışmayla mümkün olduğuna inanıyoruz.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =====================================================================
+     BÖLÜM 4 — GEÇMİŞİMİZ / BAŞARILAR
+     Yeni yıl eklemek için en alttaki örnek <li> bloğunu kopyalayın.
+     ===================================================================== -->
+<section class="bolum" id="gecmis" aria-labelledby="gecmis-baslik">
+  <div class="kapsayici">
+    <p class="cizgi-bordo" aria-hidden="true"></p>
+    <h2 class="bolum-baslik" id="gecmis-baslik">Nereden geliyoruz?</h2>
+    <p class="bolum-alt">Takım üyelerimizin bugüne kadar içinde yer aldığı süreçler</p>
+
+    <ul class="zaman">
+
+      <li>
+        <h3><span class="yil">2023</span>İlk dereceler</h3>
+        <p>
+          Gaziantep'i temsil eden ekipler, TEKNOFEST Roket Yarışması'nda Yüksek İrtifa
+          kategorisinde Türkiye 1.'liği, Lise kategorisinde Türkiye 2.'liği elde etti.
+          Şehir adına bu alandaki ilk dereceler kazanıldı.
+        </p>
+      </li>
+
+      <li>
+        <h3><span class="yil">2024</span>Orta İrtifa finali</h3>
+        <p>
+          Orta İrtifa kategorisinde finalist olundu; tasarım raporları ve atış süreciyle
+          ilgili ilk kapsamlı tecrübeler edinildi.
+        </p>
+      </li>
+
+      <li>
+        <h3><span class="yil">2025</span>Zorlu Görev ve Örnek Takım ödülü</h3>
+        <p>
+          Zorlu Görev kategorisinde yarışıldı. ÖTR (Ön Tasarım Raporu) ve KTR (Kritik Tasarım
+          Raporu) aşamaları birincilikle tamamlanarak atış hakkı kazanıldı; finale kalan üç takım
+          arasında yer alındı. Aksaray Hisar Atış Alanı'ndaki uçuşun ardından yarışma Türkiye 4.'sü
+          olarak tamamlandı ve "Örnek Takım" ödülü alındı.
+        </p>
+      </li>
+
+      <li>
+        <h3><span class="yil">2026</span>Teknogaraj Roket Takımı kuruldu</h3>
+        <p>
+          Gaziantep Bilim Merkezi ve Teknogaraj çatısı altında, bu deneyimi taşıyan üyelerle
+          yeni takımımız kuruldu. Hedefimiz Orta İrtifa kategorisi.
+        </p>
+      </li>
+
+      <!-- YENİ YIL EKLEMEK İÇİN ŞU BLOĞU KOPYALAYIN:
+      <li>
+        <h3><span class="yil">2027</span>Başlık buraya</h3>
+        <p>Açıklama buraya.</p>
+      </li>
+      -->
+
+    </ul>
+  </div>
+</section>
+
+
+<!-- =====================================================================
+     BÖLÜM 5 — ROKETİMİZ
+     ---------------------------------------------------------------------
+     Üst menüdeki "Roketimiz" butonu bu üç başlığa yönlendirir:
+       #mekanik · #elektronik · #faydali-yuk
+     Teknik veriler kesinleştikçe kart içlerini güncelleyin.
+     ===================================================================== -->
+<section class="bolum" id="roketimiz" aria-labelledby="roketimiz-baslik">
+  <div class="kapsayici">
+    <p class="cizgi-bordo" aria-hidden="true"></p>
+    <h2 class="bolum-baslik" id="roketimiz-baslik">Roketimiz</h2>
+    <p class="bolum-alt">Üç ana ekip, tek bir araç · 2026 Orta İrtifa</p>
+
+    <!-- ROKET GÖRSELİ — hazır olduğunda buraya ekleyin. Örnek:
+         <img src="images/roket.webp" alt="Roket kesit görseli"
+              width="520" height="900" loading="lazy" decoding="async"
+              style="margin:0 auto 40px;">
+    -->
+
+    <div class="kartlar">
+
+      <!-- MEKANİK -->
+      <article class="kart" id="mekanik">
+        <h3>Mekanik</h3>
+        <p>
+          Roket gövdesi, burun konisi, kanatçıklar, motor yatağı ve iç taşıyıcı parçalar bu
+          ekibin sorumluluğunda. Tasarımlar bilgisayar ortamında modellenip yapısal analizden
+          geçtikten sonra üretime giriyor.
+        </p>
+        <ul>
+          <li>Gövde borusu ve burun konisi üretimi</li>
+          <li>Kanatçık geometrisi ve bağlantı tasarımı</li>
+          <li>Yapısal analiz ve ağırlık optimizasyonu</li>
+          <li>Kullanılan malzemeler: karbon fiber, fiberglass, alüminyum, çelik</li>
+        </ul>
+        <p class="kart-not">Not: Kesin malzeme ve ölçü bilgileri tasarım dondurulunca güncellenecek.</p>
+      </article>
+
+      <!-- ELEKTRONİK / AVİYONİK -->
+      <article class="kart" id="elektronik">
+        <h3>Elektronik / Aviyonik</h3>
+        <p>
+          Roketin uçuş boyunca kendini takip etmesini ve doğru anda ayrılma komutunu vermesini
+          sağlayan sistemler. Biri hazır ticari, diğeri takımımızın kendi tasarımı olmak üzere
+          iki ayrı uçuş kontrol kartı kullanıyoruz.
+        </p>
+        <ul>
+          <li>Özgün uçuş kontrol kartı tasarımı ve üretimi</li>
+          <li>Yedekli (ticari + özgün) ayrılma kontrolü</li>
+          <li>İrtifa, ivme ve konum verilerinin kaydı</li>
+          <li>Yer istasyonuna canlı telemetri aktarımı</li>
+        </ul>
+        <p class="kart-not">Not: Kart şeması ve sensör listesi buraya eklenecek.</p>
+      </article>
+
+      <!-- FAYDALI YÜK / GÖREV -->
+      <article class="kart" id="faydali-yuk">
+        <h3>Faydalı Yük &amp; Görev</h3>
+        <p>
+          Roketin taşıdığı bilimsel görev yükü. Uçuş sırasında toplanan veriler yer istasyonuna
+          aktarılıp uçuş sonrasında analiz ediliyor; bu veriler bir sonraki tasarımın girdisi
+          oluyor.
+        </p>
+        <ul>
+          <li>Görev yükü mekanik tasarımı ve entegrasyonu</li>
+          <li>Sensör seçimi ve kalibrasyonu</li>
+          <li>Veri kaydı ve yer istasyonuna aktarım</li>
+          <li>Uçuş sonrası veri analizi ve raporlama</li>
+        </ul>
+        <p class="kart-not">Not: Bu sezonun görev tanımı belirlendiğinde burası güncellenecek.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- =====================================================================
+     BÖLÜM 6 — MODEL ROKETÇİLİK NEDİR?
+     ===================================================================== -->
+<section class="bolum" id="roketcilik" aria-labelledby="roketcilik-baslik">
+  <div class="kapsayici">
+    <p class="cizgi-bordo" aria-hidden="true"></p>
+    <h2 class="bolum-baslik" id="roketcilik-baslik">Model roketçilik nedir?</h2>
+    <p class="bolum-alt">Kısa bir giriş</p>
+
+    <div class="ikili">
+      <div class="metin">
+        <p>
+          Model roketçilik; belirli güvenlik kuralları çerçevesinde tasarlanan, üretilen ve
+          uçurulan küçük ölçekli roketlerle uğraşma işidir. Amaç bir roketi havaya göndermek
+          kadar, onu sağlam bir şekilde geri getirebilmektir. Bir uçuşun başarılı sayılması için
+          roketin hedeflenen irtifaya çıkması, kurtarma sisteminin doğru anda açılması ve aracın
+          hasarsız inmesi gerekir.
+        </p>
+        <p>
+          Bir roket temel olarak burun konisi, gövde, kanatçıklar, motor ve kurtarma
+          sisteminden oluşur. Motor, yakıtın yanmasıyla oluşan gazı hızla dışarı atar; bu itki
+          roketi yukarı taşır. Kanatçıklar aracı rüzgârda dengede tutar. Burun konisinin şekli
+          ise hava direncini belirler.
+        </p>
+        <p>
+          Bir roketin stabil uçabilmesi için ağırlık merkezinin, basınç merkezinin önünde
+          olması gerekir. Bu denge sağlanmazsa roket havada takla atar. Bu yüzden tasarımın en
+          başından itibaren her parçanın ağırlığı ve yeri hesaplanır.
+        </p>
+      </div>
+
+      <div class="metin">
+        <p>
+          Kurtarma sistemi genellikle iki aşamalıdır: roket tepe noktasına ulaştığında küçük bir
+          sürükleme paraşütü açılır ve araç kontrollü şekilde alçalır; belirli bir irtifada ise
+          ana paraşüt açılarak iniş hızı güvenli seviyeye düşürülür. Bu komutları veren sistem,
+          aviyonik dediğimiz uçuş kontrol elektroniğidir.
+        </p>
+        <p>
+          Türkiye'de bu alandaki en kapsamlı organizasyon TEKNOFEST Roket Yarışması'dır. Takımlar
+          Alçak, Orta ve Yüksek İrtifa ile Zorlu Görev gibi kategorilerde yarışır. Süreç sadece
+          atış gününden ibaret değildir: ön tasarım raporu, kritik tasarım raporu ve teknik
+          kontroller geçilmeden atış alanına çıkılamaz.
+        </p>
+        <p>
+          Orta İrtifa kategorisinde hedef, roketi belirlenen irtifaya olabildiğince yakın
+          çıkarmaktır. Ne altında kalmak ne de üstüne çıkmak istenir; puanı belirleyen şey
+          isabettir. Bu da tasarımın baştan sona doğru hesaplanmasını gerektirir.
+        </p>
+        <p class="kart-not">
+          Kaynak: ROKETSAN "Temel Roketçilik Eğitimi" kitabı ve yarışma şartnameleri.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =====================================================================
+     BÖLÜM 7 — VİDEO ALANI
+     ---------------------------------------------------------------------
+     VİDEO EKLEMEK İÇİN: aşağıdaki <div class="video-bos">...</div>
+     bloğunu SİLİN ve yerine şunlardan birini yapıştırın:
+
+     1) YouTube:
+        <iframe src="https://www.youtube.com/embed/VIDEO_KODU"
+                title="Teknogaraj Roket Takımı tanıtım videosu"
+                loading="lazy" allowfullscreen
+                allow="accelerometer; clipboard-write; encrypted-media; picture-in-picture"></iframe>
+
+     2) Kendi mp4 dosyanız:
+        <video src="images/video.mp4" controls preload="none"
+               poster="images/video-kapak.jpg"></video>
+     ===================================================================== -->
+<section class="bolum" id="video" aria-labelledby="video-baslik">
+  <div class="kapsayici">
+    <p class="cizgi-bordo" aria-hidden="true"></p>
+    <h2 class="bolum-baslik" id="video-baslik">Takım videomuz</h2>
+    <p class="bolum-alt">Çalışmalarımızdan ve uçuşlarımızdan kesitler</p>
+
+    <div class="video-kutu">
+      <!-- VİDEO BURAYA -->
+      <p class="video-bos">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+          <rect x="2.5" y="5" width="19" height="14" rx="2" stroke="#b3abab" stroke-width="1.2"/>
+          <path d="M10 9.3v5.4l4.6-2.7z" fill="#7b0126" stroke="#b3abab" stroke-width="1"/>
+        </svg>
+        Video yakında burada olacak.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- =====================================================================
+     BÖLÜM 8 — SPONSORLUK
+     ---------------------------------------------------------------------
+     Paket içerikleri bilerek boş bırakıldı. Kesinleşince aşağıdaki
+     <p> satırlarının içini doldurmanız yeterli.
+     ===================================================================== -->
+<section class="bolum" id="sponsorluk" aria-labelledby="sponsorluk-baslik">
+  <div class="kapsayici">
+    <p class="cizgi-bordo" aria-hidden="true"></p>
+    <h2 class="bolum-baslik" id="sponsorluk-baslik">Sponsorluk</h2>
+    <p class="bolum-alt">
+      Destek seviyelerimiz ve karşılığında sunduğumuz görünürlük imkânları.
+      Detaylar yakında burada paylaşılacak.
+    </p>
+
+    <ul class="paketler">
+
+      <li class="paket">
+        <h3>Ana Sponsorluk</h3>
+        <span class="seviye" aria-hidden="true"></span>
+        <p><!-- İÇERİK BURAYA -->Detaylar yakında eklenecek.</p>
+      </li>
+
+      <li class="paket">
+        <h3>Altın Sponsorluk</h3>
+        <span class="seviye" aria-hidden="true"></span>
+        <p><!-- İÇERİK BURAYA -->Detaylar yakında eklenecek.</p>
+      </li>
+
+      <li class="paket">
+        <h3>Gümüş Sponsorluk</h3>
+        <span class="seviye" aria-hidden="true"></span>
+        <p><!-- İÇERİK BURAYA -->Detaylar yakında eklenecek.</p>
+      </li>
+
+      <li class="paket">
+        <h3>Bronz Sponsorluk</h3>
+        <span class="seviye" aria-hidden="true"></span>
+        <p><!-- İÇERİK BURAYA -->Detaylar yakında eklenecek.</p>
+      </li>
+
+    </ul>
+
+    <p class="sponsor-not">
+      Bir iş birliğini konuşmak isterseniz
+      <a href="mailto:teknogarajrokettakimi@gmail.com">teknogarajrokettakimi@gmail.com</a>
+      adresinden veya aşağıdaki numaralardan bize ulaşabilirsiniz.
+    </p>
+  </div>
+</section>
+
+
+<!-- =====================================================================
+     BÖLÜM 9 — İLETİŞİM
+     ---------------------------------------------------------------------
+     Numara değiştirirken İKİ yeri güncelleyin:
+       href="tel:+905524897978"  (boşluksuz, +90 ile)
+       ve ekranda görünen yazı.
+     ===================================================================== -->
+<section class="bolum" id="iletisim" aria-labelledby="iletisim-baslik">
+  <div class="kapsayici">
+    <p class="cizgi-bordo" aria-hidden="true"></p>
+    <h2 class="bolum-baslik" id="iletisim-baslik">İletişim</h2>
+    <p class="bolum-alt">Bize doğrudan ulaşabilirsiniz</p>
+
+    <div class="iletisim-kutu">
+
+      <div class="kisi">
+        <p class="rol">Takım Kaptanı</p>
+        <h3>Eyüp Arda Soytürk</h3>
+        <a href="tel:+905524897978">0552 489 79 78</a>
+      </div>
+
+      <div class="kisi">
+        <p class="rol">İletişim Sorumlusu</p>
+        <h3>Gülşen Alsaç</h3>
+        <a href="tel:+905348627027">0534 862 70 27</a>
+      </div>
+
+    </div>
+
+    <!-- E-POSTA VE SOSYAL MEDYA -->
+    <div class="baglantilar">
+
+      <a class="baglanti" href="mailto:teknogarajrokettakimi@gmail.com">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+          <rect x="2.5" y="4.5" width="19" height="15" rx="2" stroke="#f4f2f1" stroke-width="1.4"/>
+          <path d="m3 6 9 6.5L21 6" stroke="#f4f2f1" stroke-width="1.4"/>
+        </svg>
+        teknogarajrokettakimi@gmail.com
+      </a>
+
+      <a class="baglanti" href="https://www.instagram.com/teknogaraj_rocket_teamm/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+          <rect x="3" y="3" width="18" height="18" rx="5" stroke="#f4f2f1" stroke-width="1.4"/>
+          <circle cx="12" cy="12" r="4" stroke="#f4f2f1" stroke-width="1.4"/>
+          <circle cx="17.2" cy="6.8" r="1.1" fill="#f4f2f1"/>
+        </svg>
+        Instagram<span class="gizli-baslik"> (yeni sekmede açılır)</span>
+      </a>
+
+      <a class="baglanti" href="https://www.linkedin.com/company/teknogaraj-roket-tak%C4%B1m%C4%B1/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+          <rect x="3" y="3" width="18" height="18" rx="3" stroke="#f4f2f1" stroke-width="1.4"/>
+          <path d="M7 10v7M7 7.2v.1M11 17v-4a2 2 0 0 1 4 0v4" stroke="#f4f2f1" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        LinkedIn<span class="gizli-baslik"> (yeni sekmede açılır)</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+
+<!-- =====================================================================
+     BÖLÜM 10 — ALT BİLGİ (FOOTER)
+     ===================================================================== -->
+<footer class="altbilgi">
+  <div class="kapsayici">
+    <p>Teknogaraj Roket Takımı · Gaziantep Bilim Merkezi &amp; Teknogaraj</p>
+    <p><a href="mailto:teknogarajrokettakimi@gmail.com">teknogarajrokettakimi@gmail.com</a></p>
+    <p>© 2026 · Tüm hakları saklıdır.</p>
+  </div>
+</footer>
+
+</body>
+</html>
