@@ -1,0 +1,7 @@
+# Teknogaraj Roket Takımı — robots.txt
+# Tüm arama motorlarının siteyi taramasına izin verilir.
+User-agent: *
+Allow: /
+
+# DEĞİŞTİRİN: alan adınızı yazın
+Sitemap: https://ALAN-ADINIZ.com/sitemap.xml
